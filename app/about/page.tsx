@@ -1,18 +1,15 @@
 import { METADATA } from "@/common/constant/metadata";
-import HomeComponents from "@/modules/home";
+import AboutComponents from "@/modules/about";
 import { Metadata } from "next";
+import React from "react";
 
 export const metadata: Metadata = {
-  title: `Personal Website ${METADATA.exTitle}`,
+  title: `About ${METADATA.exTitle}`,
   alternates: {
     canonical: process.env.DOMAIN,
   },
 };
 
-export default function Home() {
-  return (
-    <>
-      <HomeComponents />
-    </>
-  );
+export default function About() {
+  return <AboutComponents />;
 }

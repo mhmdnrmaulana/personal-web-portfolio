@@ -34,7 +34,7 @@ export default function Motion({ projects, classname }: any) {
   return (
     <div ref={ref}>
       <motion.ul variants={container} initial="hidden" animate="visible">
-        {/* <div className="grid md:grid-cols-2 gap-x-8 gap-y-12 mt-8">
+        <div className="grid md:grid-cols-2 gap-x-8 gap-y-12 mt-8">
           {projects.data &&
             projects.data.map((project: any, index: any) => (
               <motion.li key={index} variants={item}>
@@ -101,7 +101,7 @@ export default function Motion({ projects, classname }: any) {
                 </div>
               </motion.li>
             ))}
-        </div> */}
+        </div>
       </motion.ul>
     </div>
   );

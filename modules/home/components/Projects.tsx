@@ -6,7 +6,7 @@ import React from "react";
 import { BiLayer } from "react-icons/bi";
 
 export default async function LatestProjects() {
-  // const projects = await getData(`${process.env.DOMAIN}/api/latest`);
+  const projects = await getData(`${process.env.DOMAIN}/api/latest`);
 
   return (
     <div>
@@ -21,7 +21,7 @@ export default async function LatestProjects() {
           </div>
         </TextScrollLeft>
 
-        {/* <Motion projects={projects} /> */}
+        <Motion projects={projects} />
       </Compo>
     </div>
   );

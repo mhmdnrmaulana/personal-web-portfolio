@@ -1,13 +1,14 @@
 export const METADATA = {
   creator: "Maulana",
-  description: "My Web Portfolio",
+  description: "Personal website, portfolio, frontend web developer",
+  keyword: "maulana, MAULANA, personal website , programming tips",
   authors: {
     name: "Muhammad Nur Maulana",
     url: process.env.DOMAIN,
   },
   openGraph: {
-    siteName: "Maulana",
     url: process.env.DOMAIN,
+    siteName: "MAULANA",
     locale: "id-ID",
   },
   icons: {
@@ -19,6 +20,7 @@ export const METADATA = {
       url: "/favicon.ico",
     },
   },
-  exTitle: " | Maulana",
+  exTitle: "MAULANA | ",
   githubUsername: process.env.GITHUB_USERNAME,
+  githubToken: process.env.GITHUB_TOKEN,
 };

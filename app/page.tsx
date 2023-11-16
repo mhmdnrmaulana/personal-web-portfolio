@@ -4,9 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: `Personal Website ${METADATA.exTitle}`,
-  alternates: {
-    canonical: process.env.DOMAIN,
-  },
+  description: `Home ${METADATA.description}`,
 };
 
 export default function Home() {

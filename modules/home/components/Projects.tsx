@@ -2,8 +2,10 @@ import Motion from "@/common/elements/Motion";
 import TextScrollLeft from "@/common/elements/TextScroll";
 import Compo from "@/common/elements/compo";
 import { getData } from "@/common/service/getData";
+import Link from "next/link";
 import React from "react";
 import { BiLayer } from "react-icons/bi";
+import { TbEye } from "react-icons/tb";
 
 export default async function LatestProjects() {
   const projects = await getData(`${process.env.DOMAIN}/api/latest`);
@@ -22,6 +24,13 @@ export default async function LatestProjects() {
         </TextScrollLeft>
 
         <Motion projects={projects} />
+
+        <div className="flex justify-center my-8">
+          <Link href={"/projects"} target="_blank" aria-label="View On Github" className="text-blue-600 dark:text-blue-300 flex gap-1 items-center hover:opacity-70 duration-100">
+            View All Projects
+            <TbEye className="h-full w-6 animate-pulse" />
+          </Link>
+        </div>
       </Compo>
     </div>
   );

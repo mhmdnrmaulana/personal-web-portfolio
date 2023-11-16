@@ -5,9 +5,7 @@ import React from "react";
 
 export const metadata: Metadata = {
   title: `About ${METADATA.exTitle}`,
-  alternates: {
-    canonical: process.env.DOMAIN,
-  },
+  description: `About ${METADATA.description}`,
 };
 
 export default function About() {

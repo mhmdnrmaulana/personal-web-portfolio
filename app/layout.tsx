@@ -12,7 +12,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   description: METADATA.description,
+  keywords: METADATA.keyword,
   creator: METADATA.creator,
+  metadataBase: new URL("https://maulana-v3.vercel.app"),
   authors: {
     name: METADATA.creator,
     url: METADATA.openGraph.url,

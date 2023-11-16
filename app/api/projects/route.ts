@@ -16,7 +16,7 @@ const data = [
     ],
     image: "/images/project2.webp",
     alt: "Personal Website Portofolio",
-    desc: "I create personal website portfolio projects with Next JS, Tailwind, Framer and several features such as home, about, projects, articles, responsiveness and many more.",
+    desc: "Personal website portfolio built with projects with Next JS, Tailwind, Framer and several features such as home, about, projects, articles, responsiveness and many more.",
     img: [
       {
         image: "/images/tailwind.png",
@@ -112,7 +112,7 @@ const data = [
     ],
     image: "/images/project4.webp",
     alt: "Personal Website Portofolio",
-    desc: "I create personal website portfolio projects with React Js, Tailwind and several features such as home, about, projects, articles,blog, responsiveness and many more.",
+    desc: "Open Source personal website portfolio and blog projects built with React Js, Tailwind and several features such as home, about, projects, articles,blog, responsiveness and many more.",
     img: [
       {
         image: "/images/react.png",

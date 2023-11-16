@@ -1,5 +1,6 @@
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillMail, AiOutlineDeploymentUnit } from "react-icons/ai";
-import { BiAtom, BiLayer } from "react-icons/bi";
+import { BiLayer } from "react-icons/bi";
+import { FaCode, FaGrip } from "react-icons/fa6";
 import { FaDiscord, FaHome, FaTelegram, FaWhatsapp } from "react-icons/fa";
 
 export const socialLinks = [
@@ -53,22 +54,25 @@ export const listNav = [
     icons: <FaHome size={25} />,
   },
   {
+    name: "Skills",
+    href: "/#skills",
+    icons: <FaCode size={25} />,
+  },
+  {
+    name: "LatestProjects",
+    href: "/#latest",
+    icons: <FaGrip size={25} />,
+  },
+  {
     name: "About",
     href: "/about",
     icons: <AiOutlineDeploymentUnit size={25} />,
   },
 
   {
-    name: "All Projects",
+    name: "AllProjects",
     href: "/projects",
-
     icons: <BiLayer size={25} />,
-  },
-  {
-    name: "Article",
-    href: "/articles",
-
-    icons: <BiAtom size={25} />,
   },
 ];
 

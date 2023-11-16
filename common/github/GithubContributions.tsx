@@ -9,7 +9,7 @@ export async function Contributions() {
   return (
     <div className="mb-8">
       <div className="flex items-center gap-3">
-        <TbBrandGithub size={40} />
+        <TbBrandGithub size={30} />
         <h2 className="text-2xl font-semibold">Contributions</h2>
       </div>
       <p>My contributions from last year on github.</p>

@@ -1,6 +1,6 @@
 import ContainerScroll from "@/common/elements/ContainerScroll";
 import React from "react";
-import { AiOutlineDeploymentUnit } from "react-icons/ai";
+import { LiaBookReaderSolid } from "react-icons/lia";
 
 export default function Education() {
   return (
@@ -8,7 +8,7 @@ export default function Education() {
       <div>
         <div className="w-full h-[1px] bg-black dark:bg-white mb-8" />
         <div className="flex items-center gap-2 font-mono font-semibold mb-2">
-          <AiOutlineDeploymentUnit size={30} className="text-blue-700" />
+          <LiaBookReaderSolid size={30} className="text-blue-700" />
 
           <h1 className="text-2xl font-bold">Education</h1>
         </div>

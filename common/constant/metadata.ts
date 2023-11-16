@@ -1,5 +1,5 @@
 export const METADATA = {
-  creator: "Maulana",
+  creator: "MAULANA",
   description: "Personal website, portfolio, frontend web developer",
   keyword: "maulana, MAULANA, personal website , programming tips",
   authors: {
@@ -20,7 +20,7 @@ export const METADATA = {
       url: "/favicon.ico",
     },
   },
-  exTitle: "MAULANA | ",
+  exTitle: " | MAULANA",
   githubUsername: process.env.GITHUB_USERNAME,
   githubToken: process.env.GITHUB_TOKEN,
 };

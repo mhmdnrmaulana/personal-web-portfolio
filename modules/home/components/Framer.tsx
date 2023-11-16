@@ -3,7 +3,6 @@ import { skillsMap } from "@/common/service/maping";
 import { motion, useTransform, useMotionValue, useAnimationFrame, wrap } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
-import { SiNextdotjs } from "react-icons/si";
 
 interface ParallaxProps {
   baseVelocity: number;

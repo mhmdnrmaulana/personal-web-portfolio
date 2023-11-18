@@ -1,10 +1,9 @@
-import LinkTrComponents from "@/modules/linktree";
 import React from "react";
 
 export default function LinkTr() {
   return (
     <div>
-      <LinkTrComponents />
+      <h1>tes</h1>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { socialMap } from "@/common/constant/social";
 import TextScrollRight from "@/common/elements/TextRight";
 import TextScrollLeft from "@/common/elements/TextScroll";
 import Compo from "@/common/elements/compo";
@@ -22,11 +23,11 @@ export default function Social() {
 
         <TextScrollRight>
           <div className="flex items-center flex-wrap gap-8">
-            {socialLinks.map((item, index) => (
+            {socialMap.map((item, index) => (
               <div className="flex flex-col items-center justify-center gap-4 group" key={index}>
                 <h2 className="group-hover:opacity-100 opacity-0 transition-all duration-1000">{item.name}</h2>
-                <a aria-labelledby={item.name} href={item.href} target="_blank" aria-label={`Link To ${item.name}}`}>
-                  {item.icon}
+                <a href={item.href} target="_blank" aria-label={`${item.name}}`}>
+                  <item.SvgIcon className={`w-5 h-5 ${item.class}`} />
                 </a>
               </div>
             ))}

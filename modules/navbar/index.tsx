@@ -1,11 +1,11 @@
 "use client";
-import { MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight } from "react-icons/md";
-import Link from "next/link";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import React from "react";
 import { usePathname } from "next/navigation";
-import { listNav } from "@/common/service/maping";
-import { motion } from "framer-motion";
 import { METADATA } from "@/common/constant/metadata";
+import { Menu } from "@/common/constant/menu";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -19,7 +19,7 @@ const container = {
   },
 };
 
-const item = {
+const items = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
@@ -30,64 +30,68 @@ const item = {
 export default function Navbar() {
   const [navOpen, setNavOpen] = React.useState<boolean>(false);
 
-  const pathname = usePathname();
+  const path = usePathname();
 
-  const toggleNav = () => {
-    setNavOpen(!navOpen);
+  const handleMobileNav = (value: boolean) => {
+    setNavOpen(value);
   };
 
   return (
-    <nav className={`fixed left-0 top-0 z-50 md:px-12 py-4 max-w-max${navOpen ? "bg-slate-200 dark:bg-black h-screen px-4 w-full md:max-w-max" : "bg-transparent"}`}>
-      <button aria-label="change to translate-x button" onClick={() => toggleNav()} className={`text-slate-800 dark:text-white ${navOpen ? "translate-x-[19rem] max-w-max" : ""} transition-all duration-500`}>
-        {navOpen ? <MdKeyboardDoubleArrowLeft size={30} /> : <MdKeyboardDoubleArrowRight size={30} />}
+    <nav className="fixed w-screen h-0 z-50 dark:text-neutral-300">
+      <button
+        onClick={() => handleMobileNav(!navOpen)}
+        className={`absolute z-10 top-5 cursor-pointer transition-all duration-700
+        ${navOpen ? "left-64 md:left-[350px] rotate-180" : "left-3"}`}
+      >
+        <MdKeyboardDoubleArrowRight className="w-6 h-6" />
       </button>
 
-      <motion.ul variants={container} initial="hidden" animate="visible">
-        <div className={`${navOpen ? "hidden" : "flex flex-col lg:flex-row gap-8 mt-4 md:mt-2 pl-2"}`}>
-          {listNav.map((list, index) => (
-            <motion.li key={index} variants={item}>
-              <Link aria-label={`Link to ${list.name} page`} href={list.href} key={index} className="group flex flex-col relative">
-                <h2 className="hidden transition-all text-sm duration-300 group-hover:block absolute -top-[200%] bg-white rounded-md py-1 px-4 text-slate-950">{list.name}</h2>
-                {list.icons}
-              </Link>
-            </motion.li>
-          ))}
-        </div>
+      <motion.ul variants={container} initial="hidden" animate="visible" className={`${navOpen ? "hidden" : "flex flex-col py-16 pl-3 gap-4 max-w-max"}`}>
+        {Menu.map((item, index) => (
+          <motion.li key={index} className="group" variants={items}>
+            <p className="font-mono hidden group-hover:flex absolute top-1 bg-neutral-300 text-neutral-800 p-1 rounded">{item.label}</p>
+            <Link href={item.pathName}>
+              <item.Svg className="w-6 h-6" />
+            </Link>
+          </motion.li>
+        ))}
       </motion.ul>
 
-      <div className={`${navOpen ? "block" : "hidden"}`}>
-        <div className={`${navOpen ? "" : ""}  relative transition-all duration-500`}>
-          <div className="flex gap-4 items-center">
-            <div className="w-24 h-24 rounded-full bg-white" />
-            <div className="flex flex-col gap-1">
-              <h2 className="font-semibold text-3xl text-slate-900 dark:text-white">{METADATA.creator}</h2>
-              <p className="text-sm font-semibold text-slate-900 dark:text-white animate-pulse">Frontend Web Developer</p>
-              <div className="flex items-center gap-2">
-                <p className="px-4 border border-slate-950 dark:border-white dark:text-white rounded-bl-lg rounded-tr-lg text-sm font-bold text-slate-800">Hireable</p>
-                <p className="px-4 border border-slate-950 dark:border-white dark:text-white rounded-bl-lg rounded-tr-lg text-sm font-bold text-slate-800">Student</p>
-              </div>
+      {navOpen ? <div onClick={() => handleMobileNav(false)} className="w-screen h-screen bg-black/40 absolute top-0 left-0" /> : ""}
+
+      <ul
+        className={`${navOpen ? "left-0" : "-left-full"} 
+      absolute top-0 w-80 md:w-[400px] transition-all duration-500 bg-white dark:bg-neutral-800 dark:text-white text-slate-950 px-8 pt-14 h-screen`}
+      >
+        <li className="flex gap-4 items-center">
+          <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[url('/images/my.webp')] bg-cover bg-center" />
+          <div className="flex flex-col gap-1">
+            <h1 className="text-2xl md:text-3xl font-bold">{METADATA.creator}</h1>
+            <p className="text-sm animate-pulse">Frontend Developer</p>
+            <div className="flex items-center gap-2">
+              <p className="font-semibold font-mono rounded-tr-md rounded-bl-md border border-neutral-700 bg-neutral-400 text-slate-950 p-1 text-sm">Student</p>
+              <p className="font-semibold font-mono rounded-tr-md rounded-bl-md border border-neutral-700 bg-neutral-400 text-slate-950 p-1 text-sm">Hireable</p>
             </div>
           </div>
+        </li>
 
-          <div className="w-full h-[1px] bg-slate-950 my-8" />
-
-          <div className="flex flex-col gap-4 font-normal text-slate-800">
-            {listNav.map((item, index) => (
-              <Link onClick={() => setNavOpen(!navOpen)} aria-label={`Link To ${item.name}`} href={item.href} key={index} className={`group dark:text-white`}>
-                <div className={`flex items-center gap-4 dark:group-hover:bg-slate-800 group-hover:scale-110 px-2 group-hover:px-2 rounded-md transition-all duration-300 py-2 ${pathname === item.href ? " dark:bg-slate-800" : ""}`}>
-                  <div className={`${index == 3 ? "animate-spin" : ""}`}>{item.icons}</div>
-                  <h2 className="text-sm font-semibold font-mono">{item.name}</h2>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div className="mt-20 text-slate-800 dark:text-white">
-            <p>Made by Muhammad Nur Maulana</p>
-            <p>All Right Reserved</p>
-          </div>
-        </div>
-      </div>
+        <li className="mt-8 flex flex-col gap-4">
+          <div className="w-full h-[2px] bg-neutral-400" />
+          {Menu.map((menu, index) => (
+            <Link
+              href={menu.pathName}
+              key={index}
+              onClick={() => handleMobileNav(false)}
+              className={`${menu.pathName === path ? "dark:bg-neutral-950 bg-neutral-300 dark:text-white text-neutral-800" : ""} 
+            flex items-center gap-2 p-2 hover:bg-neutral-200 transition-all duration-300 hover:dark:bg-neutral-900 hover:scale-105 rounded`}
+              aria-label={menu.label}
+            >
+              <menu.Svg className="w-6 h-6" />
+              <p>{menu.label}</p>
+            </Link>
+          ))}
+        </li>
+      </ul>
     </nav>
   );
 }

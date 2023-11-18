@@ -13,6 +13,9 @@ const data = [
       {
         tag: "Website",
       },
+      {
+        tag: "Portfolio",
+      },
     ],
     image: "/images/project2.webp",
     alt: "Personal Website Portofolio",

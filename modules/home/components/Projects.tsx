@@ -11,7 +11,7 @@ export default async function LatestProjects() {
   const projects = await getData(`${process.env.DOMAIN}/api/latest`);
 
   return (
-    <div id="latest">
+    <div>
       <Compo>
         <TextScrollLeft>
           <div className="w-full h-[1px] bg-black dark:bg-white mb-8" />

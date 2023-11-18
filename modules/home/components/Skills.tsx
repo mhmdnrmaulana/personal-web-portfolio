@@ -8,7 +8,7 @@ import { FaCode } from "react-icons/fa6";
 
 export default function Skills() {
   return (
-    <div id="skills">
+    <div>
       <Compo>
         <TextScrollLeft>
           <div className="w-full h-[1px] bg-black dark:bg-white mb-8" />

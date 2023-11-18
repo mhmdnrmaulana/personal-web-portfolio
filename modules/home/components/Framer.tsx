@@ -1,5 +1,5 @@
 "use client";
-import { skillsMap } from "@/common/service/maping";
+import { SkillsMap } from "@/common/constant/skills";
 import { motion, useTransform, useMotionValue, useAnimationFrame, wrap } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
@@ -23,10 +23,10 @@ function Parallax({ baseVelocity = 200 }: ParallaxProps) {
   return (
     <div className="overflow-hidden w-full">
       <motion.div style={{ x }} className="flex flex-wrap gap-x-2 gap-y-8 md:gap-8 w-[2500px]">
-        {skillsMap?.map((skill, index) => (
-          <div key={index} className="flex items-center px-4 gap-2 border border-slate-800 py-2 rounded-full bg-slate-300 text-slate-950">
-            <Image width={30} height={30} src={skill.image} alt={skill.alt} />
-            <h2 className="text-xs md:text-sm font-mono font-semibold">{skill.name}</h2>
+        {SkillsMap.map((skill, index) => (
+          <div key={index} className="flex items-center px-4 gap-2 border border-slate-800 py-2 rounded-full bg-neutral-100 dark:bg-stone-950 text-slate-950">
+            <skill.Icon className={`w-7 h-7 ${skill.Class}`} />
+            <h2 className="text-xs md:text-sm font-mono font-semibold dark:text-white text-slate-900">{skill.Name}</h2>
           </div>
         ))}
       </motion.div>
@@ -37,8 +37,8 @@ function Parallax({ baseVelocity = 200 }: ParallaxProps) {
 export default function Framer() {
   return (
     <div className="flex flex-col gap-8">
-      <Parallax baseVelocity={5}></Parallax>
-      <Parallax baseVelocity={-5}></Parallax>
+      <Parallax baseVelocity={2}></Parallax>
+      <Parallax baseVelocity={-2}></Parallax>
     </div>
   );
 }

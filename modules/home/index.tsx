@@ -12,6 +12,7 @@ export default function HomeComponents() {
         <HomeHeader />
         <Social />
         <Skills />
+        <LatestProjects />
       </Container>
     </main>
   );

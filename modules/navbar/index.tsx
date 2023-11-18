@@ -46,7 +46,7 @@ export default function Navbar() {
         <MdKeyboardDoubleArrowRight className="w-6 h-6" />
       </button>
 
-      <motion.ul variants={container} initial="hidden" animate="visible" className={`${navOpen ? "hidden" : "flex flex-col py-16 pl-3 gap-4 max-w-max"}`}>
+      <motion.ul variants={container} initial="hidden" animate="visible" className={`${navOpen ? "hidden" : "flex flex-col md:flex-row py-16 pl-3 gap-4 max-w-max"}`}>
         {Menu.map((item, index) => (
           <motion.li key={index} className="group" variants={items}>
             <p className="font-mono hidden group-hover:flex absolute top-1 bg-neutral-300 text-neutral-800 p-1 rounded">{item.label}</p>

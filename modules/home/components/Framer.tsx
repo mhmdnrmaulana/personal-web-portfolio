@@ -1,7 +1,6 @@
 "use client";
 import { SkillsMap } from "@/common/constant/skills";
 import { motion, useTransform, useMotionValue, useAnimationFrame, wrap } from "framer-motion";
-import Image from "next/image";
 import { useRef } from "react";
 
 interface ParallaxProps {

@@ -8,7 +8,7 @@ import { FaGrip } from "react-icons/fa6";
 import { TbEye } from "react-icons/tb";
 
 export default async function LatestProjects() {
-  // const projects = await getData(`${process.env.DOMAIN}/api/latest`);
+  const projects = await getData(`${process.env.DOMAIN}/api/latest`);
 
   return (
     <div>
@@ -22,6 +22,8 @@ export default async function LatestProjects() {
             <h1 className="font-semibold text-2xl">Latest Projects</h1>
           </div>
         </TextScrollLeft>
+
+        <Motion projects={projects} />
 
         <div className="flex justify-center my-8">
           <Link href={"/projects"} aria-label="View All Projects" className="text-blue-600 dark:text-blue-300 flex gap-1 items-center hover:opacity-70 duration-100">

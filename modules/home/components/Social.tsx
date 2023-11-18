@@ -2,7 +2,6 @@ import { socialMap } from "@/common/constant/social";
 import TextScrollRight from "@/common/elements/TextRight";
 import TextScrollLeft from "@/common/elements/TextScroll";
 import Compo from "@/common/elements/compo";
-import { socialLinks } from "@/common/service/maping";
 import React from "react";
 import { AiFillControl } from "react-icons/ai";
 

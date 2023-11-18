@@ -1,5 +1,4 @@
 import { METADATA } from "@/common/constant/metadata";
-import ProjectsComponent from "@/modules/project";
 import { Metadata } from "next";
 import React from "react";
 
@@ -12,7 +11,6 @@ export default function Projects() {
   return (
     <div>
       <h1>tes</h1>
-      {/* <ProjectsComponent /> */}
     </div>
   );
 }

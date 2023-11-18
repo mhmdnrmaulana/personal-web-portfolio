@@ -23,8 +23,6 @@ export default async function LatestProjects() {
           </div>
         </TextScrollLeft>
 
-        {/* <Motion projects={projects} /> */}
-
         <div className="flex justify-center my-8">
           <Link href={"/projects"} aria-label="View All Projects" className="text-blue-600 dark:text-blue-300 flex gap-1 items-center hover:opacity-70 duration-100">
             View All Projects

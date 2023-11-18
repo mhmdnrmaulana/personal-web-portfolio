@@ -5,7 +5,6 @@ export default function LinkTr() {
   return (
     <div>
       <h1>Tes</h1>
-      {/* <LinkTrComponents /> */}
     </div>
   );
 }

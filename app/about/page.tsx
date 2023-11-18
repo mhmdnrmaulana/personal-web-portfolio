@@ -1,5 +1,4 @@
 import { METADATA } from "@/common/constant/metadata";
-import AboutComponents from "@/modules/about";
 import { Metadata } from "next";
 import React from "react";
 
@@ -9,5 +8,9 @@ export const metadata: Metadata = {
 };
 
 export default function About() {
-  return <AboutComponents />;
+  return (
+    <div>
+      <h1>tes</h1>
+    </div>
+  );
 }

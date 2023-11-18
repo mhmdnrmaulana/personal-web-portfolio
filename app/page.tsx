@@ -1,5 +1,4 @@
 import { METADATA } from "@/common/constant/metadata";
-import HomeComponents from "@/modules/home";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,7 +10,6 @@ export default function Home() {
   return (
     <div>
       <h1>tes</h1>
-      {/* <HomeComponents /> */}
     </div>
   );
 }

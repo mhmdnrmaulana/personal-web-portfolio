@@ -8,5 +8,10 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <HomeComponents />;
+  return (
+    <div>
+      <h1>tes</h1>
+      {/* <HomeComponents /> */}
+    </div>
+  );
 }

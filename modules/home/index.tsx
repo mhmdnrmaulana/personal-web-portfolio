@@ -12,7 +12,7 @@ export default function HomeComponents() {
         <HomeHeader />
         <Social />
         <Skills />
-        <LatestProjects />
+        {/* <LatestProjects /> */}
       </Container>
     </main>
   );

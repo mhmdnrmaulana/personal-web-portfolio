@@ -9,5 +9,10 @@ export const metadata: Metadata = {
 };
 
 export default function Projects() {
-  return <ProjectsComponent />;
+  return (
+    <div>
+      <h1>tes</h1>
+      {/* <ProjectsComponent /> */}
+    </div>
+  );
 }

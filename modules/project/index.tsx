@@ -7,7 +7,7 @@ import React from "react";
 import { BiLayer } from "react-icons/bi";
 
 export default async function ProjectsComponent() {
-  const projects = await getData(`${process.env.DOMAIN}/api/projects`);
+  // const projects = await getData(`${process.env.DOMAIN}/api/projects`);
 
   return (
     <Container>
@@ -26,7 +26,7 @@ export default async function ProjectsComponent() {
           <div className="w-full h-[1px] bg-black dark:bg-white my-8" />
         </TextScrollLeft>
 
-        <Motion projects={projects} classname="hidden" />
+        {/* <Motion projects={projects} classname="hidden" /> */}
       </Compo>
     </Container>
   );

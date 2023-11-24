@@ -4,9 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import DisableScroll from "@/common/elements/DisbleScroll";
 import { ModeToggle } from "@/common/layouts/ChangeTheme";
-import Navbar from "@/modules/navbar";
-import Footer from "@/modules/footer";
 import { METADATA } from "@/common/constant/metadata";
+import CloseNoteFound from "@/common/layouts/CloseNoteFound";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,9 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <DisableScroll />
           <ModeToggle />
-          <Navbar />
-          {children}
-          <Footer />
+          <CloseNoteFound>{children}</CloseNoteFound>
         </ThemeProvider>
       </body>
     </html>

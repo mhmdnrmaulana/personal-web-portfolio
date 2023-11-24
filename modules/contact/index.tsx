@@ -26,7 +26,7 @@ export default function ContactForm() {
                   type="text"
                   name="name"
                   id="name"
-                  placeholder="example: Indonesia Studio"
+                  placeholder="example: Maulana Company"
                   className="py-1 px-2 outline outline-1 outline-stone-500 duration-300
                 rounded-md focus:bg-stone-100 focus:dark:bg-neutral-700
                 focus:outline-2 focus:outline-blue-400"
@@ -39,6 +39,7 @@ export default function ContactForm() {
                   type="text"
                   name="email"
                   id="email"
+                  placeholder="example: maulana@example.com"
                   className="py-1 px-2 outline outline-1 outline-stone-500 duration-300
                 rounded-md focus:bg-stone-100 focus:dark:bg-neutral-700
                 focus:outline-2 focus:outline-blue-400"
@@ -65,6 +66,7 @@ export default function ContactForm() {
                   name="message"
                   id="message"
                   required
+                  placeholder="example: I want to know more about"
                   className="py-1 px-2 focus:bg-stone-100 rounded-md outline outline-1 outline-stone-500
         focus:outline-2 focus:outline-blue-400 focus:dark:bg-neutral-700"
                 ></textarea>

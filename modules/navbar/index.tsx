@@ -39,6 +39,7 @@ export default function Navbar() {
   return (
     <nav className="fixed w-screen h-0 z-50 dark:text-neutral-300">
       <button
+        aria-label="open mobile nav"
         onClick={() => handleMobileNav(!navOpen)}
         className={`absolute z-10 top-5 cursor-pointer transition-all duration-700
         ${navOpen ? "left-64 md:left-[350px] rotate-180" : "left-3"}`}
@@ -50,7 +51,7 @@ export default function Navbar() {
         {Menu.map((item, index) => (
           <motion.li key={index} className="group" variants={items}>
             <p className="font-mono hidden group-hover:flex absolute top-1 bg-neutral-300 text-neutral-800 p-1 rounded">{item.label}</p>
-            <Link href={item.pathName}>
+            <Link href={item.pathName} aria-label={`${item.label}`}>
               <item.Svg className="w-6 h-6" />
             </Link>
           </motion.li>

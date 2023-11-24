@@ -21,12 +21,12 @@ export default function Social() {
         </TextScrollLeft>
 
         <TextScrollRight>
-          <div className="flex items-center flex-wrap gap-8">
+          <div className="grid grid-cols-4 lg:grid-cols-10 gap-2 py-12">
             {socialMap.map((item, index) => (
-              <div className="flex flex-col items-center justify-center gap-4 group" key={index}>
-                <h2 className="group-hover:opacity-100 opacity-0 transition-all duration-1000">{item.name}</h2>
+              <div className="flex flex-col items-center justify-center group relative gap-2" key={index}>
+                <h2 className="opacity-0 group-hover:opacity-100 transition-all duration-1000">{item.name}</h2>
                 <a href={item.href} target="_blank" aria-label={`${item.name}}`}>
-                  <item.SvgIcon className={`w-5 h-5 ${item.class}`} />
+                  <item.SvgIcon className={`w-6 h-6 ${item.class}`} />
                 </a>
               </div>
             ))}

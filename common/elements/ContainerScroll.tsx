@@ -10,9 +10,9 @@ export default function ContainerScroll({ children }: { children: React.ReactNod
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{
-        duration: 0.8,
+        duration: 0.7,
         delay: 0.5,
-        ease: [0, 0.71, 0.2, 1.01],
+        ease: [0, 0.7, 0.2, 1],
       }}
     >
       {children}

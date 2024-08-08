@@ -7,7 +7,7 @@ import React from "react"
 import { BiLayer } from "react-icons/bi"
 
 export default async function ProjectsComponent() {
-  const projects = await getData(`http://localhost:3000/api/projects`)
+  const projects = await getData(`${process.env.DOMAIN}/api/projects`)
 
   return (
     <Container>

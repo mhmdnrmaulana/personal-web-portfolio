@@ -8,7 +8,7 @@ import { FaGrip } from "react-icons/fa6"
 import { TbEye } from "react-icons/tb"
 
 export default async function LatestProjects() {
-  const projects = await getData(`http://localhost:3000/api/latest`)
+  const projects = await getData(`${process.env.DOMAIN}/api/latest`)
 
   return (
     <div>

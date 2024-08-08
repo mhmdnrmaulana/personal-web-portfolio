@@ -1,14 +1,14 @@
-import Motion from "@/common/elements/Motion";
-import TextScrollLeft from "@/common/elements/TextScroll";
-import Compo from "@/common/elements/compo";
-import { getData } from "@/common/service/getData";
-import Link from "next/link";
-import React from "react";
-import { FaGrip } from "react-icons/fa6";
-import { TbEye } from "react-icons/tb";
+import Motion from "@/common/elements/Motion"
+import TextScrollLeft from "@/common/elements/TextScroll"
+import Compo from "@/common/elements/compo"
+import { getData } from "@/common/service/getData"
+import Link from "next/link"
+import React from "react"
+import { FaGrip } from "react-icons/fa6"
+import { TbEye } from "react-icons/tb"
 
 export default async function LatestProjects() {
-  const projects = await getData(`${process.env.DOMAIN}/api/latest`);
+  const projects = await getData(`http://localhost:3000/api/latest`)
 
   return (
     <div>
@@ -33,5 +33,5 @@ export default async function LatestProjects() {
         </div>
       </Compo>
     </div>
-  );
+  )
 }

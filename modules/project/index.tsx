@@ -1,13 +1,13 @@
-import Motion from "@/common/elements/Motion";
-import TextScrollLeft from "@/common/elements/TextScroll";
-import Compo from "@/common/elements/compo";
-import Container from "@/common/layouts/Container";
-import { getData } from "@/common/service/getData";
-import React from "react";
-import { BiLayer } from "react-icons/bi";
+import Motion from "@/common/elements/Motion"
+import TextScrollLeft from "@/common/elements/TextScroll"
+import Compo from "@/common/elements/compo"
+import Container from "@/common/layouts/Container"
+import { getData } from "@/common/service/getData"
+import React from "react"
+import { BiLayer } from "react-icons/bi"
 
 export default async function ProjectsComponent() {
-  const projects = await getData(`${process.env.DOMAIN}/api/projects`);
+  const projects = await getData(`http://localhost:3000/api/projects`)
 
   return (
     <Container>
@@ -29,5 +29,5 @@ export default async function ProjectsComponent() {
         <Motion projects={projects} classname="hidden" />
       </Compo>
     </Container>
-  );
+  )
 }

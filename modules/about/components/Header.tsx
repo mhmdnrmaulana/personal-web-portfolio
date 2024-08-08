@@ -1,8 +1,8 @@
-import TextScrollRight from "@/common/elements/TextRight";
-import TextScrollLeft from "@/common/elements/TextScroll";
-import Compo from "@/common/elements/compo";
-import React from "react";
-import { AiOutlineDeploymentUnit } from "react-icons/ai";
+import TextScrollRight from "@/common/elements/TextRight"
+import TextScrollLeft from "@/common/elements/TextScroll"
+import Compo from "@/common/elements/compo"
+import React from "react"
+import { AiOutlineDeploymentUnit } from "react-icons/ai"
 
 export default function AboutHeader() {
   return (
@@ -27,7 +27,7 @@ export default function AboutHeader() {
             comprehensive understanding of various frontend libraries and frameworks. I have been navigating the ever-evolving landscape of web development with enthusiasm and dedication. Currently, reside in Jakarta, Jakarta{" "}
             <span className="font-semibolg text-xs font-semibold">ID</span>
           </h1>
-          <h1 className="text-sm">I am currently active as a third semester student at Indra Prasta PGRI University and taking Bachelor`s Degree majoring in Informatics Engineering in 2022 and expected to graduate in 2026. </h1>
+          <h1 className="text-sm">I am currently active as a five semester student at Indra Prasta PGRI University and taking Bachelor`s Degree majoring in Informatics Engineering in 2022 and expected to graduate in 2026. </h1>
           <h1 className="text-sm">
             I specializing in React and Next JS framework, along with Firebas and PostgreSQL. My primary focus is on delivering high-performance websites that are interactive and responsive. With my experience in web application
             development, I strive to provide users with an optimal experience through attractive designs and exceptional functionality. I enjoy exploring new technologies and continuously learning the best practices to enhance website
@@ -36,5 +36,5 @@ export default function AboutHeader() {
         </div>
       </TextScrollRight>
     </Compo>
-  );
+  )
 }
